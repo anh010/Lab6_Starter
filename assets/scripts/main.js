@@ -48,7 +48,7 @@ function addRecipesToDocument(recipes) {
     recipeElement.data = {
                                 "imgSrc": recipes[idx].imgSrc,
                                 "imgAlt": recipes[idx].imgAlt,
-                                "titleLnk": recipes[idx].titelLnk,
+                                "titleLnk": recipes[idx].titleLnk,
                                 "titleTxt": recipes[idx].titleTxt,
                                 "organization": recipes[idx].organization,
                                 "rating": recipes[idx].rating,
@@ -95,7 +95,7 @@ function initFormHandler() {
   //            values from the FormData object and insert them into recipeObject
     let recipeObj ={};
     for (const [key,value] of formData){
-      console.log(key+" "+ value);
+      // console.log(key+" "+ value);
       recipeObj[key] = value; 
     }  
     console.log(recipeObj);
@@ -115,7 +115,7 @@ function initFormHandler() {
     };
   // B8. TODO - Append this new <recipe-card> to <main>
     let mainElement = document.querySelector('main');
-    console.log(mainElement);
+    // console.log(mainElement);
     mainElement.append(recipeElement);  
   // B9. TODO - Get the recipes array from localStorage, add this new recipe to it, and
   //            then save the recipes array back to localStorage
